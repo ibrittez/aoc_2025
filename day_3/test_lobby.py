@@ -11,12 +11,16 @@ def test_0():
 
 
 def test_1():
-    assert get_jotage("123") == 23
-    assert get_jotage("123\n") == 23
-    assert get_jotage("987654321111111") == 98
-    assert get_jotage("92312312312811111") == 98
+    assert get_jotage("123", 2) == 23
+    assert get_jotage("123\n", 2) == 23
+    assert get_jotage("987654321111111", 2) == 98
+    assert get_jotage("92312312312811111", 2) == 98
 
 
 def test_2():
     f = open("./test")
-    assert calc_total_joltage(f.readlines()) == 357
+    assert calc_total_joltage(f.readlines(), 2) == 357
+
+
+def test_3():
+    assert get_jotage("987654321111111", 12) == 987654321111
