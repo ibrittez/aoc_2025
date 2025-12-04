@@ -41,6 +41,8 @@ def calc_total_joltage(banks, bank_size):
 
 
 f = open("./input")
+ratings = f.readlines()
 
 print("total joltage: ")
-print(f"\tpart 1:\t{calc_total_joltage(f.readlines(), 2)}")
+print(f"\tpart 1:\t{calc_total_joltage(ratings, 2)}")
+print(f"\tpart 2:\t{calc_total_joltage(ratings, 12)}")
